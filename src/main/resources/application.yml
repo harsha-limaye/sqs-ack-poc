@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: sqs-ack-poc
+  cloud:
+    aws:
+      region:
+        static: us-east-1
+      credentials:
+        access-key: i don't
+        secret-key: care
+      sqs:
+        endpoint: http://localhost:4566
+
+logging:
+  level:
+    root: WARN
+    io.awspring.cloud.sqs: WARN
+    com.sandbox: INFO
+
+app:
+  queue-async: async-fire-and-forget-queue
+  queue-sync: sync-blocking-queue
